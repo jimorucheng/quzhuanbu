@@ -1,0 +1,102 @@
+<!--index.wxml-->
+<view class="homeWrap">
+  <view class="headBox">
+    <image src='/images/tuoYuan.png' class="tuoYuan"></image>
+    <image src='/images/tuoyuankong.png' class="tuoyuankong"></image>
+    <image src='/images/qiu.png' class="qiu"></image>
+    <image src='/images/guoqi.png' class="guoqi"></image>
+  </view>
+  <view class="stepBox clearFix" wx:if="{{stepShow}}">
+    <view class="fl leftBox">今日已走</view>
+    <view class="step fl">{{steps}}</view>
+    <view class="yesdaystep">{{yesdaystep}}</view>
+    <view class="fl rightBox">步</view>
+  </view>
+  <view class="midleBox">
+    <view class="friendLine clearFix">
+      <view class="fl buddyRanking clearFix">
+        <view class="blueLine fl"></view>
+        <view class="fl buRaTitle">连续达标
+          <view class="num">{{reach}}</view>天</view>
+      </view>
+      <view class="fr cumulative">连续7天可额外获得0.5元</view>
+      <image src="/images/warnCircle.png" class="warnCircle fr"></image>
+    </view>
+    <view class="secondLine clearFix">
+      <view class="yellowLine fl"></view>
+      <view wx:if="{{step1000}}" class="circleStep fl">1000</view>
+      <view wx:else>
+        <image src="/images/daka.png" class="circleStep fl"></image>
+      </view>
+      <view class="yellowLine fl"></view>
+      <view wx:if="{{step2500}}" class="circleStep fl">2500</view>
+      <view wx:else>
+        <image src="/images/daka.png" class="circleStep fl"></image>
+      </view>
+      <view class="yellowLine fl"></view>
+      <view class="cirStep5000 fl">
+        <view wx:if="{{step5000}}" class="circleStep ">5000</view>
+        <view wx:else>
+          <image src="/images/daka.png" class="circleStep fl"></image>
+        </view>
+        <view class="juxing">+0.2元</view>
+      </view>
+      <view class="yellowLine fl"></view>
+      <view wx:if="{{step7000}}" class="circleStep fl">7000</view>
+      <view wx:else>
+        <image src="/images/daka.png" class="circleStep fl"></image>
+      </view>
+      <view class="yellowLine fl"></view>
+      <view class="cirStep10000 fl">
+        <view wx:if="{{step10000}}" class="circleStep ">10000</view>
+        <view wx:else>
+          <image src="/images/daka.png" class="circleStep fl"></image>
+        </view>
+        <view class="juxing">+0.3元</view>
+      </view>
+      <view class="yellowLine fl"></view>
+    </view>
+  </view>
+  <view class="bottomBox">
+    <view class="bottomBoxLine">步数不够 好友来凑</view>
+    <view class="bottomBoxSecond">每邀请一位新好友，获得 1000步</view>
+    <button class="invitation" open-type="share" bindtap="openShareTap">立即邀请</button>
+  </view>
+</view>
+<!-- 微信步数授权页 -->
+<view class="maskBox" wx:if="{{isButtonShow}}">
+  <view class="maskWhiteBox">
+    <image src="/images/bushuShouquan.png" class="girl"></image>
+    <view class="runTitle1">正在申请微信运动授权</view>
+    <view class="anseTrip">必须授权微信步数才可使用步数相关功能！是否再次授权登陆！</view>
+    <button type="text" bindtap="openSettingTap" class="openSettingBtn">确定</button>
+  </view>
+</view>
+<!-- 昨日收益页 -->
+<view class="maskBox1" wx:if="{{maskBox1}}">
+  <view wx:if="{{isSignInSuceess}}" class="isSignInSuceess">
+    <view class="maskSmalleBgSuceess">
+      <view wx:if="{{isAllSevenDay}}">
+        <view class="successTitle">恭喜您连续打卡7天成功获得收益请再接再厉～</view>
+        <image src="/images/jinbiSuccess.png" class="jinbiSuccess"></image>
+        <view>
+          <view class="numRed1">{{oneDayMoney}}元</view>
+          <view class="numRed2">+{{weekDayMoney}}元
+            <view class="numRed3">(额外奖励)</view>
+          </view>
+        </view>
+      </view>
+      <view wx:else>
+        <view class="successTitle title2">恭喜您获得昨日收益请再接再厉～</view>
+        <image src="/images/jinbiSuccess.png" class="jinbiSuccess"></image>
+        <view class="numRed4">+{{oneDayMoney}}元</view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <view class="maskSmalleBgeError">
+      <view class="errorTitle">很遗憾您没有获得昨日运动收益请再接再厉～</view>
+    </view>
+  </view>
+  <image src="/images/close.png" class="close" bindtap="close"></image>
+</view>

@@ -1,0 +1,15 @@
+/* pages/chooseAccount/chooseAccount.wxss */
+
+/* 账号列表页 */
+.clearFix{display: block;content: '';clear:both;}
+.clearFix::after{zoom: 1}
+.fl{float: left}
+.fr{float: right}
+page{height: 100%;background: #FAFAFA;width: 100%;overflow-y: hidden}
+.isHasAccountListArray{margin-top: 20rpx;width:750rpx;height: 128rpx;padding: 18rpx 0 0 0;box-sizing: border-box;background:rgba(255,255,255,1);line-height: 128rpx;}
+.listLeftBox{margin-left: 36rpx;width:400rpx;height: 92rpx;}
+.zhifubaoPic{width: 92rpx;height: 92rpx;}
+.zhanghaoBigMing{font-size: 30rpx;color:rgba(51,51,51,1);line-height:42rpx;margin-left: 20rpx;margin-top: 8rpx;width: 260rpx;}
+.zhanghaoBigNum{font-size: 24rpx;color:rgba(153,153,153,1);line-height:34rpx;margin-left: 20rpx;text-align: left;}
+.choosedAccount{margin-right: 34rpx;width: 40rpx;height: 40rpx;margin-top: 28rpx;}
+.bindingAlipay{width:678rpx;height:88rpx;background:linear-gradient(180deg,rgba(175,202,252,1) 0%,rgba(91,146,239,1) 100%);border-radius:44rpx;margin-top: 108rpx;margin-left: 36rpx;text-align: center;line-height: 88rpx;font-size: 30rpx;color:rgba(255,255,255,1);}

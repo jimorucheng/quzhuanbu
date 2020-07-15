@@ -1,0 +1,20 @@
+/* pages/bindingAlipay/bindingAlipay.wxss */
+.clearFix{display: block;content: '';clear:both;}
+.clearFix::after{zoom: 1}
+.fl{float: left}
+.fr{float: right}
+page{height: 100%;background: #FAFAFA;width: 100%;overflow-y: hidden}
+/* 绑定支付宝 */
+.wrap{padding: 100rpx 76rpx 0 76rpx;}
+.singleLine{height: 106rpx;line-height: 106rpx;border-bottom: solid 2px #F5F5F5;}
+.leftBox{font-size: 28rpx;color:rgba(102,102,102,1);width: 170rpx;text-align: left;}
+.rightBox{font-size: 30rpx;border: none;width: 390rpx;margin-top: 30rpx;}
+.YzmNum{width: 176rpx;}
+.YzmBtn{width:190rpx;height:48rpx;background:rgba(255,187,9,1);border-radius:40rpx;text-align: center;line-height: 48rpx;font-size: 24rpx;color:rgba(255,255,255,1);margin-top: 30rpx;}
+.ok{width:598rpx;height:80rpx;background:linear-gradient(180deg,rgba(175,202,252,1) 0%,rgba(91,146,239,1) 100%);border-radius:40rpx;margin-top: 152rpx;text-align: center;line-height: 80rpx;font-size: 30rpx;color:rgba(255,255,255,1);}
+button::after{
+  border:none;
+}
+button{
+  background-color: #fff;
+}

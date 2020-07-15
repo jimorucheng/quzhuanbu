@@ -1,0 +1,60 @@
+<!--logs.wxml-->
+<view class="userInfo">
+  <view class="headBox">
+    <image src="{{userInfoAvatarUrl}}" class="userInfoPic"></image>
+    <view class="userInfoNickname">{{userInfoNickName}}</view>
+    <view class="moneyTitle">我的可提现余额：
+      <view class="numBa">{{balance}}</view> 元</view>
+  </view>
+  <view class="midlleBox">
+    <view class="lineBox clearFix">
+      <view class="fl singleBox">
+        <view class="numSty">{{accumulated_income}}</view>
+        <view class="titleSty">累计金额(元)</view>
+      </view>
+      <view class="fl singleBox">
+        <view class="numSty">{{num}}</view>
+        <view class="titleSty">累计步行天数</view>
+      </view>
+      <view class="fl singleBox">
+        <view class="numSty">{{accumulated_step}}</view>
+        <view class="titleSty">累计已走步数</view>
+      </view>
+    </view>
+    <view class="liftingAmount" bindtap="cashWithdrawal">可提现
+      <view class="cashWithdlNum">{{balance}}</view>元</view>
+  </view>
+  <view class="friendBox">
+    <view class="friendLine clearFix">
+      <view class="fl buddyRanking clearFix">
+        <view class="blueLine fl"></view>
+        <view class="fl buRaTitle">好友排行</view>
+      </view>
+      <view class="fr cumulative" wx:if="{{cumulative}}">您已帮好友累计获得金额{{price}}元</view>
+    </view>
+    <view class="titleLine clearFix">
+      <view class="fl user1">用户排名</view>
+      <view class="fl bushu1">已走步数</view>
+      <view class="fl money1">获得金额</view>
+    </view>
+    <view class="friendList">
+      <view wx:if="{{friendListArray.length!=0}}" style="margin-bottom:130rpx;">
+        <view class="listBox" wx:for="{{friendListArray}}" wx:for-index="idx" wx:for-item="itemList" wx:key="idx">
+          <view class="leftBox">
+            <view class="imageBg">
+              <image src="{{itemList.headicon}}" class="aviteIcon"></image>
+            </view>
+            <view class="ranking">NO.{{idx+1}}</view>
+            <view class="nickName">{{itemList.nickname}}</view>
+          </view>
+          <view class="midleBox">{{itemList.step}}</view>
+          <view class="rigthBox">{{itemList.balance/100}}</view>
+        </view>
+      </view>
+      <view wx:else class="noOne">
+        暂无好友参与
+      </view>
+    </view>
+    <button class="shareBtn" open-type="share" bindtap="openShareTap">邀请更多好友来玩</button>
+  </view>
+</view>

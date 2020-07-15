@@ -1,0 +1,60 @@
+/* pages/cash/cash.wxss */
+
+.clearFix{display: block;content: '';clear:both;}
+.clearFix::after{zoom: 1}
+.fl{float: left}
+.fr{float: right}
+page{height: 100%;background: #FAFAFA;width: 100%;overflow-y: hidden}
+.cashBox{}
+.account{
+  width:750rpx;
+  height: 128rpx;
+  line-height: 128rpx;
+  margin-top: 20rpx;
+  background:rgba(255,255,255,1);
+}
+.leftBox{color:rgba(51,51,51,1);font-size: 30rpx;margin-left: 36rpx;}
+.rightBox{color:rgba(153,153,153,1);font-size: 24rpx;margin-right: 20rpx;}
+.rightRow{margin-right: 38rpx;width: 18rpx;height: 18rpx;margin-top: 56rpx;}
+.second{width: 750rpx;height: 280rpx;margin-top: 20rpx;background:rgba(255,255,255,1);padding: 24rpx 0 0 36rpx;box-sizing: border-box;}
+.seModu1{color:rgba(51,51,51,1);font-size: 30rpx;line-height:42rpx;}
+.seModu2{margin-top: 20rpx;font-size:40rpx;font-family:AlibabaPuHuiTiM;color:rgba(51,51,51,1);line-height:54rpx;padding-bottom: 18rpx;border-bottom: solid 2rpx #F5F5F5;font-weight: 600;height: 70rpx;}
+.seModu2Left{margin-right: 20rpx;}
+.inputBox{border: none;font-size: 40rpx;}
+.seModu3{height: 102rpx;line-height: 102rpx;font-size: 24rpx;}
+.seModu3Left{color:rgba(153,153,153,1);}
+.seModu3Mid{display: inline-block;}
+.seModu3Right{color:rgba(15,141,238,1);margin-left: 20rpx;}
+.ok{width:678rpx;height:88rpx;background:linear-gradient(180deg,rgba(175,202,252,1) 0%,rgba(91,146,239,1) 100%);border-radius:44rpx;margin-top: 108rpx;margin-left: 36rpx;text-align: center;line-height: 88rpx;font-size: 30rpx;color:rgba(255,255,255,1);}
+
+/* 绑定过后 */
+.rightBox1{margin-right: 20rpx;height: 52rpx;margin-top: 38rpx;width: 340rpx;}
+.zhifubaoSmall{width: 52rpx;height: 52rpx;}
+.zhanghaoMing{font-size: 24rpx;color:rgba(102,102,102,1);line-height:26rpx;margin-left: 20rpx;width: 260rpx;}
+.zhanghaoNum{font-size: 24rpx;color:rgba(102,102,102,1);line-height:26rpx;margin-left: 20rpx;text-align: left;}
+
+
+/* /重写默认按钮样式/ */
+button[type='primary'] {
+background:rgba(102,156,246,1);
+padding: 0px 0px;
+line-height: 90rpx;
+font-size: 36rpx;
+border: 0px;
+border-radius: 44rpx;
+margin: 0px 0px;
+}
+/* /边框样式重写/ */
+button[type='primary']::after {
+border: none;
+border-radius: 44rpx;
+}
+/* /鼠标按下/ */
+button[type='primary']:active {
+background:rgba(102,156,246,1);
+}
+/* /鼠标滑过,点击过程/ */
+.button-hover[type=primary] {
+background: transparent;
+}
+

@@ -1,0 +1,35 @@
+/* pages/start/start.wxss */
+.title1{text-align: center;width: 100%;font-size: 58rpx;color:rgba(51,51,51,1);line-height:44rpx;height: 53rpx;margin-top:100rpx;}
+.title2{text-align: center;width: 100%;font-size: 49rpx;color:rgba(51,51,51,1);line-height:38rpx;height: 46rpx;margin-top: 30rpx;}
+.chaHua{width:630rpx;height: 557rpx;margin-left: 62rpx;margin-top: 118rpx;}
+button::after{
+  border:none;
+}
+button{
+  background-color: #fff;
+}
+.login{width:400rpx;height:90rpx;background:rgba(102,156,246,1);border-radius:44rpx;text-align: center;line-height: 90rpx;position: fixed;bottom: 86rpx;left: 175rpx;font-size: 36rpx;color:rgba(254,254,254,1);}
+/* /重写默认按钮样式/ */
+button[type='primary'] {
+background:rgba(102,156,246,1);
+padding: 0px 0px;
+line-height: 90rpx;
+font-size: 36rpx;
+border: 0px;
+border-radius: 44rpx;
+margin: 0px 0px;
+}
+/* /边框样式重写/ */
+button[type='primary']::after {
+border: none;
+border-radius: 44rpx;
+}
+/* /鼠标按下/ */
+button[type='primary']:active {
+background:rgba(102,156,246,1);
+}
+/* /鼠标滑过,点击过程/ */
+.button-hover[type=primary] {
+background: transparent;
+}
+

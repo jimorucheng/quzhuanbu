@@ -1,0 +1,12 @@
+<!--pages/chooseAccount/chooseAccount.wxml-->
+<view wx:for="{{accountListArray}}" wx:key="idx" wx:for-index="idx" id="{{idx}}" bindtap="choosedAccount">
+  <view class="isHasAccountListArray clearFix">
+    <view class="listLeftBox fl">
+      <image src="/images/zhifubao.png" class="zhifubaoPic fl"></image>
+      <view class="zhanghaoBigMing fl">{{item.name}}</view>
+      <view class="zhanghaoBigNum fl">{{item.account_number}}</view>
+    </view>
+    <image src="/images/choosed.png" class="fr choosedAccount" wx:if="{{item.isChoosedAccount}}"></image>
+  </view>
+</view>
+<view class="bindingAlipay" bindtap="bindingAlipay">添加支付宝账号</view>

@@ -1,0 +1,31 @@
+<!--pages/cash/cash.wxml-->
+<view class="cashBox">
+  <view class="account clearFix">
+    <view class="leftBox fl">收款账户</view>
+    <image src="/images/rightRow.png" class="rightRow fr"></image>
+    <view wx:if="{{isHasAccount}}">
+      <view class="rightBox fr" bindtap="addCollectionAccount">请添加收款账户</view>
+    </view>
+    <view wx:else>
+      <view class="fr rightBox1" bindtap="addCollectionAccount">
+        <image src="/images/zhifubaoSmall.png" class="zhifubaoSmall fl"></image>
+        <view class="zhanghaoMing fl">{{accountName}}</view>
+        <view class="zhanghaoNum fl">{{accountNum}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="second">
+    <view class="seModu1">提现金额</view>
+    <view class="seModu2 clearFix">
+      <view class="seModu2Left fl">¥ </view>
+      <input value="2" class="inputBox fl" bindinput="cashNum" type="text" maxlength="4" />
+    </view>
+    <view class="seModu3 clearFix">
+      <view class="seModu3Left fl">可提现金额¥
+        <view class="seModu3Mid">{{balanceAll}}</view>
+      </view>
+      <view class="seModu3Right fl" bindtap="balanceAll">全部提现</view>
+    </view>
+  </view>
+  <view class="ok"  bindtap="cashMoney">预计两个工作日内到账，确认提现</view>
+</view>

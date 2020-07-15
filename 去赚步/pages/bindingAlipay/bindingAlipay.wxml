@@ -1,0 +1,22 @@
+<!--pages/bindingAlipay/bindingAlipay.wxml-->
+<view class="wrap">
+  <view class="singleLine clearFix">
+    <view class="fl leftBox">真实姓名</view>
+    <input type="text" placeholder="请输入支付宝认证的真实姓名" class="rightBox fl weui-input" bindinput="getName" />
+  </view>
+  <view class="singleLine clearFix">
+    <view class="fl leftBox">支付宝账号</view>
+    <input type="text" placeholder="请输入支付宝认证的真实账号" class="rightBox fl weui-input" bindinput="getAccount" />
+  </view>
+  <view class="singleLine clearFix">
+    <view class="fl leftBox">手机号码</view>
+    <input type="number" placeholder="请输入手机号码" class="rightBox fl weui-input" bindinput="getPhone" maxlength="11" />
+  </view>
+  <view class="singleLine clearFix">
+    <view class="fl leftBox">验证码</view>
+    <input type="number" class="rightBox fl YzmNum weui-input" bindinput="getYzm" />
+    <button  class="YzmBtn fr" bindtap="getYzmBtn" disabled='{{isDisabled}}'>{{yzmTitle}}</button>
+  </view>
+  <view class="ok fr"  bindtap="bingAlipaySuccess">确定
+  </view>
+</view>

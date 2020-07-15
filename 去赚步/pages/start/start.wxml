@@ -1,0 +1,13 @@
+<!--pages/start/start.wxml-->
+<view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class="title1">邀请好友 健康同行</view>
+        <view class="title2">步步都赚钱</view>
+        <image src="/images/chaHua.png" class="chaHua"></image>
+        <button class='login' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            点击进入
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+ 

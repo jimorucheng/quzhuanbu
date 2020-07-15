@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "去赚步",
+  "usingComponents": {},
+  "backgroundColor": "#ccc",
+  "enablePullDownRefresh":true
+}

@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/cash/cash",
+    "pages/chooseAccount/chooseAccount",
+    "pages/bindingAlipay/bindingAlipay"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#5B92EF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "步数",
+        "iconPath": "images/run.jpg",
+        "selectedIconPath": "images/run1.jpg"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "赚钱",
+        "iconPath": "images/makeMoney.jpg",
+        "selectedIconPath": "images/makeMoney1.jpg"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap32.json"
+}
